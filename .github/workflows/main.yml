@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker build -t phamtony/frontend -f Dockerfile.dev
+      - run: docker build -t phamtony/frontend -f Dockerfile.dev .
       - run: docker run -e CI=true phamtony/frontend npm test
